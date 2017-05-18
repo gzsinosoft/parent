@@ -3,7 +3,7 @@
 
     <groupId>com.sinosoftgz</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.8-SNAPSHOT</version>
+    <version>1.0.9-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
 
     <packaging>pom</packaging>
@@ -21,6 +21,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
                 <configuration>
                     <!--<tagBase>https://192.168.1.100:8443/svn/myapp/tags/</tagBase>-->
                     <!--<tagBase></tagBase>-->
