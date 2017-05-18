@@ -106,6 +106,8 @@
             </releases>
             <snapshots>
                 <enabled>true</enabled>
+                <checksumPolicy>warn</checksumPolicy>
+                <updatePolicy>interval:240</updatePolicy>
             </snapshots>
         </repository>
         <repository>
