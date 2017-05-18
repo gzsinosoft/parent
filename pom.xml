@@ -34,6 +34,7 @@
 
     <properties>
         <gpg.executable>gpg</gpg.executable>
+        <gpg.passphrase>sakurawinds</gpg.passphrase>
     </properties>
 
     <build>
