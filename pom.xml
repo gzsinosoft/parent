@@ -21,10 +21,15 @@
         </developer>
     </developers>
 
-
     <packaging>pom</packaging>
     <dependencies />
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.3.RELEASE</version>
+    </parent>
+    
     <scm>
         <url>https://github.com/gzsinosoft/parent</url>
         <connection>scm:git:https://github.com/gzsinosoft/parent</connection>
@@ -36,6 +41,18 @@
         <gpg.executable>gpg</gpg.executable>
         <gpg.passphrase>sakurawinds</gpg.passphrase>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Dalston.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
