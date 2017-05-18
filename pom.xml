@@ -29,7 +29,7 @@
         <url>https://github.com/gzsinosoft/parent</url>
         <connection>scm:git:https://github.com/gzsinosoft/parent</connection>
         <developerConnection>scm:git:https://github.com/gzsinosoft/parent</developerConnection>
-        <tag>parent-1.0.14</tag>
+        <tag>parent-1.0.21</tag>
     </scm>
 
     <build>
@@ -50,6 +50,11 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
+                        <configuration>
+                            <gpgArguments>
+                                <gpgArgument>--no-tty</gpgArgument>
+                            </gpgArguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
