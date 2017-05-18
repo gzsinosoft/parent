@@ -3,7 +3,7 @@
 
     <groupId>com.sinosoftgz</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.14-SNAPSHOT</version>
+    <version>1.0.14</version>
     <modelVersion>4.0.0</modelVersion>
 
     <packaging>pom</packaging>
@@ -13,7 +13,7 @@
         <url>https://github.com/gzsinosoft/parent</url>
         <connection>scm:git:https://github.com/gzsinosoft/parent</connection>
         <developerConnection>scm:git:https://github.com/gzsinosoft/parent</developerConnection>
-        <tag>HEAD</tag>
+        <tag>parent-1.0.14</tag>
     </scm>
 
     <build>
