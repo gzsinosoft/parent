@@ -26,7 +26,6 @@
         </plugins>
     </build>
 
-
     <!--配置私服 -->
     <repositories>
         <repository>
