@@ -32,6 +32,10 @@
         <tag>parent-1.0.21</tag>
     </scm>
 
+    <properties>
+        <gpg.executable>gpg2</gpg.executable>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
