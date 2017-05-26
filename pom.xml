@@ -24,6 +24,11 @@
     <packaging>pom</packaging>
     <dependencies />
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -37,10 +42,51 @@
         <tag>parent-1.0.21</tag>
     </scm>
 
-    <properties>
-        <gpg.executable>gpg</gpg.executable>
-        <gpg.passphrase>sakurawinds</gpg.passphrase>
-    </properties>
+    <profiles>
+        <profile>
+            <id>sonatype-deploy</id>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.passphrase>sakurawinds</gpg.passphrase>
+            </properties>
+            <build>
+                <plugins>
+                    <!-- GPG -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <keyname>sinosoftgz</keyname>
+                                    <!--<passphraseServerId>A85A30CA</passphraseServerId>-->
+                                    <!--<passphrase>sakurawinds</passphrase>
+                                    <gpgArguments>
+                                        <gpgArgument>&#45;&#45;no-tty</gpgArgument>
+                                    </gpgArguments>-->
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonatype-snapshots</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonatype-release</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 
     <dependencyManagement>
         <dependencies>
@@ -93,28 +139,6 @@
             <plugin>
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
-            </plugin>
-            <!-- GPG -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                        <configuration>
-                            <keyname>sinosoftgz</keyname>
-                            <!--<passphraseServerId>A85A30CA</passphraseServerId>-->
-                            <!--<passphrase>sakurawinds</passphrase>
-                            <gpgArguments>
-                                <gpgArgument>&#45;&#45;no-tty</gpgArgument>
-                            </gpgArguments>-->
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
@@ -178,16 +202,15 @@
         </pluginRepository>
     </pluginRepositories>
 
-
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-release</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>sinosoftgz</id>
+            <url>http://dev.sinosoftgz.com/nexus/content/repositories/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>Snapshots</id>
+            <url>http://dev.sinosoftgz.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
 
         <!--        <snapshotRepository>
                     <id>Snapshots</id>
