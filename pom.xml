@@ -157,7 +157,7 @@
         </repository>
         <repository>
             <id>nexus</id>
-            <url>http://dev.sinosoftgz.com/nexus/content/groups/public</url>
+            <url>http://dev.sinosoftgz.com:5531/nexus/content/groups/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -182,7 +182,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
-            <url>http://dev.sinosoftgz.com/nexus/content/groups/public</url>
+            <url>http://dev.sinosoftgz.com:5531/nexus/content/groups/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -205,11 +205,11 @@
     <distributionManagement>
         <repository>
             <id>sinosoftgz</id>
-            <url>http://dev.sinosoftgz.com/nexus/content/repositories/releases</url>
+            <url>http://dev.sinosoftgz.com:5531/nexus/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
             <id>Snapshots</id>
-            <url>http://dev.sinosoftgz.com/nexus/content/repositories/snapshots/</url>
+            <url>http://dev.sinosoftgz.com:5531/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
 
         <!--        <snapshotRepository>
