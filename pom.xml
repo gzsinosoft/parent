@@ -3,7 +3,7 @@
 
     <groupId>com.sinosoftgz</groupId>
     <artifactId>parent</artifactId>
-    <version>1.5.4-SNAPSHOT</version>
+    <version>1.5.5-5531</version>
     <modelVersion>4.0.0</modelVersion>
     <name>sinosoftgz parent</name>
     <description>the sinosoftgz inc opensrouce project parent pom </description>
@@ -39,7 +39,7 @@
         <url>https://github.com/gzsinosoft/parent</url>
         <connection>scm:git:https://github.com/gzsinosoft/parent</connection>
         <developerConnection>scm:git:https://github.com/gzsinosoft/parent</developerConnection>
-        <tag>parent-1.0.21</tag>
+        <tag>parent-1.5.5-5531</tag>
     </scm>
 
     <profiles>
